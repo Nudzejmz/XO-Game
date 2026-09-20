@@ -1,0 +1,89 @@
+body{
+     font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 40px 20px;
+    background-color:#f7b6d2;
+}
+h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#poruka{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+#rezultat{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+#tabla{
+    display: grid;
+     grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    justify-content: center;
+    gap: 5px;
+    margin: 0 auto 25px auto;
+}
+.polje{
+width: 100px;
+height: 100px;
+border: none;
+border-radius: 12px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+background-color: beige;
+font-size: 45px;
+font-weight: bold;
+transition: 0.2s;
+}
+.polje:hover{
+    transform: scale(1.05);
+}
+.pobjednicko{
+    background-color: lightgreen !important;
+    animation: pobjeda 0.8s infinite alternate;
+}
+@keyframes pobjeda{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.08);
+    }
+}
+button{
+    padding: 12px 25px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #d65a91;
+    color: white;
+    transition: 0.2s;
+}
+button:hover{
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    #tabla {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .polje {
+        width: 80px;
+        height: 80px;
+        font-size: 35px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
